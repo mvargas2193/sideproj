@@ -63,13 +63,13 @@
                         <inset key="scrollIndicatorInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="gzt-T9-YMi">
                             <size key="itemSize" width="150" height="220"/>
-                            <size key="headerReferenceSize" width="10" height="10"/>
-                            <size key="footerReferenceSize" width="10" height="10"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="50" height="50"/>
                             <inset key="sectionInset" minX="40" minY="15" maxX="40" maxY="15"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="jh9-OC-lBf" customClass="CollectionViewCell">
-                                <rect key="frame" x="40" y="89" width="150" height="220"/>
+                                <rect key="frame" x="40" y="79" width="150" height="220"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="150" height="220"/>
@@ -93,13 +93,25 @@
                                 </connections>
                             </collectionViewCell>
                         </cells>
-                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="SK0-F6-ksy">
-                            <rect key="frame" x="0.0" y="64" width="414" height="10"/>
+                        <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="footerView" id="klE-hX-pGq">
+                            <rect key="frame" x="0.0" y="314" width="414" height="50"/>
                             <autoresizingMask key="autoresizingMask"/>
-                        </collectionReusableView>
-                        <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="UPd-8P-PuM">
-                            <rect key="frame" x="0.0" y="324" width="414" height="10"/>
-                            <autoresizingMask key="autoresizingMask"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pJK-dt-pKa">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                    <state key="normal" title="Button"/>
+                                    <connections>
+                                        <action selector="buttonPressed:" destination="rLm-O7-W2h" eventType="touchUpInside" id="mMh-K9-3KY"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstItem="pJK-dt-pKa" firstAttribute="top" secondItem="klE-hX-pGq" secondAttribute="top" id="0uP-ev-Clz"/>
+                                <constraint firstAttribute="trailing" secondItem="pJK-dt-pKa" secondAttribute="trailing" id="IbQ-gz-UEl"/>
+                                <constraint firstItem="pJK-dt-pKa" firstAttribute="leading" secondItem="klE-hX-pGq" secondAttribute="leading" id="pcq-O0-yjT"/>
+                                <constraint firstAttribute="bottom" secondItem="pJK-dt-pKa" secondAttribute="bottom" id="rw2-Hc-PmA"/>
+                            </constraints>
                         </collectionReusableView>
                         <connections>
                             <outlet property="dataSource" destination="rLm-O7-W2h" id="z7o-zf-yMr"/>

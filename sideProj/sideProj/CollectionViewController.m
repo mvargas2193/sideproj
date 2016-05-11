@@ -39,6 +39,11 @@ static NSString * const reuseIdentifier = @"Cell";
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (IBAction)buttonPressed:(id)sender {
+    
+    NSLog(@"button pressed! hooray!");
+    
+}
 
 /*
 #pragma mark - Navigation
@@ -67,6 +72,23 @@ static NSString * const reuseIdentifier = @"Cell";
     // Configure the cell
     
     return cell;
+}
+
+-(UICollectionReusableView *) collectionView:(UICollectionView *)collectionView
+                                viewForSupplementaryElementOfKind:(NSString *)kind
+                                 atIndexPath:(NSIndexPath *)indexPath
+{
+    
+    UICollectionReusableView *view = nil;
+    
+    if (kind == UICollectionElementKindSectionFooter) {
+        UICollectionReusableView *footerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"footerView" forIndexPath:indexPath];
+        view = footerView;
+        
+    }
+    
+    return view;
+    
 }
 
 #pragma mark <UICollectionViewDelegate>
