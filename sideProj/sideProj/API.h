@@ -10,6 +10,7 @@
 
 @interface API : NSObject
 
-+(
++(void)searchRequestForMovies: (NSString *) search withCompletion: (void (^) (NSMutableArray* movies)) completionBlock;
+
 
 @end

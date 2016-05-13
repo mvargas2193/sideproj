@@ -70,13 +70,13 @@
 		4426D4481CDA82DC005178DF /* sideProj */ = {
 			isa = PBXGroup;
 			children = (
+				4426D4521CDA82DC005178DF /* Main.storyboard */,
 				4426D44C1CDA82DC005178DF /* AppDelegate.h */,
 				4426D44D1CDA82DC005178DF /* AppDelegate.m */,
 				4426D44F1CDA82DC005178DF /* ViewController.h */,
 				4426D4501CDA82DC005178DF /* ViewController.m */,
 				44E5CD4C1CDBC3C400DE6500 /* CollectionViewController.h */,
 				44E5CD4D1CDBC3C400DE6500 /* CollectionViewController.m */,
-				4426D4521CDA82DC005178DF /* Main.storyboard */,
 				44E5CD551CE5704C00DE6500 /* API.h */,
 				44E5CD561CE5704C00DE6500 /* API.m */,
 				44E5CD521CE2DE7B00DE6500 /* CollectionViewCell.h */,

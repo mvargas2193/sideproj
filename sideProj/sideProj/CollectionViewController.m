@@ -36,6 +36,10 @@ static NSString * const reuseIdentifier = @"Cell";
 //    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     // Do any additional setup after loading the view.
+    
+ [API searchRequestForMovies:<#(NSString *)#> withCompletion:<#^(NSMutableArray *movies)completionBlock#>]
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
