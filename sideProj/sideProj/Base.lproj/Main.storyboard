@@ -61,15 +61,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <inset key="scrollIndicatorInsets" minX="10" minY="10" maxX="10" maxY="10"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="gzt-T9-YMi">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="10" id="gzt-T9-YMi">
                             <size key="itemSize" width="150" height="220"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="50" height="50"/>
-                            <inset key="sectionInset" minX="40" minY="15" maxX="40" maxY="15"/>
+                            <inset key="sectionInset" minX="25" minY="10" maxX="25" maxY="10"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="jh9-OC-lBf" customClass="CollectionViewCell">
-                                <rect key="frame" x="40" y="79" width="150" height="220"/>
+                                <rect key="frame" x="25" y="74" width="150" height="220"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="150" height="220"/>
@@ -94,12 +94,12 @@
                             </collectionViewCell>
                         </cells>
                         <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="footerView" id="klE-hX-pGq">
-                            <rect key="frame" x="0.0" y="314" width="414" height="50"/>
+                            <rect key="frame" x="0.0" y="304" width="414" height="50"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pJK-dt-pKa">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
-                                    <state key="normal" title="Button"/>
+                                    <state key="normal" title="Load More"/>
                                     <connections>
                                         <action selector="buttonPressed:" destination="rLm-O7-W2h" eventType="touchUpInside" id="mMh-K9-3KY"/>
                                     </connections>

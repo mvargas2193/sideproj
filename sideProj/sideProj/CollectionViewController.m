@@ -7,8 +7,12 @@
 //
 
 #import "CollectionViewController.h"
+#import "CollectionViewCell.h"
+
 
 @interface CollectionViewController ()
+
+
 
 @end
 
@@ -19,10 +23,9 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void)viewDidLoad {
     [super viewDidLoad];
    
-    UISearchBar  *sBar = [[UISearchBar alloc]initWithFrame:CGRectMake(0,10,self.navigationController.navigationBar.bounds.size.width,self.navigationController.navigationBar.bounds.size.height/2)];
+    UISearchBar  *sBar = [[UISearchBar alloc]init ];
+    sBar.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     sBar.delegate = self;
-    [self.navigationController.navigationBar addSubview:sBar];
-    
     self.navigationItem.titleView = sBar ;
 
     
