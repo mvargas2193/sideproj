@@ -75,7 +75,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="150" height="220"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KAL-oY-4GF">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Civil_War_Final_Poster" translatesAutoresizingMaskIntoConstraints="NO" id="KAL-oY-4GF">
                                             <rect key="frame" x="0.0" y="0.0" width="150" height="220"/>
                                         </imageView>
                                     </subviews>
@@ -164,4 +164,7 @@
             <point key="canvasLocation" x="680" y="475"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Civil_War_Final_Poster" width="1688" height="2500"/>
+    </resources>
 </document>

@@ -13,27 +13,51 @@
 NSString * const OMDB_URL = @"https://www.omdbapi.com/?";
 
 
+
 @implementation API
 
 
-+(void)searchRequestForMovies: (NSString *) search withCompletion: (void (^) (NSMutableArray* movies)) completionBlock {
-    
++(void)searchRequestForMovies: (NSString *) search withCompletion: (void (^) (NSMutableArray* movies)) completionBlock
+
+{
     
     NSString *urlString = [NSString stringWithFormat:@"%@s=%@&page=1", OMDB_URL, search];
     
     NSURL *omdbUrl = [NSURL URLWithString:urlString];
     
-    NSURLSession *session = [NSURLSession sharedSession];
-    
-    NSURLSession *task = [session dataTaskWithURL:omdbUrl completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+    NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithURL:omdbUrl completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         
-        if (<#condition#>) {
-            <#statements#>
+        
+        if (error) {
+            NSLog(@"Error: %@", error.description);
+            
         }
-            }
         
+        NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
+        
+        if (httpResponse.statusCode != 200) {
+            NSLog(@"uh oh! status code: %ld", (long)httpResponse.statusCode);
+            
+        }
+        
+        //using json serializtion here. convert json to be put in a dictionary.
+        
+        NSDictionary *searchResponse = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+        
+        NSMutableArray *moviesresults = searchResponse [@"Search"];
+        
+        completionBlock (moviesresults);
+        
+
     }];
+
+    
+    [task resume];
+    
+    
+    
     
     
 }
+                          
 @end

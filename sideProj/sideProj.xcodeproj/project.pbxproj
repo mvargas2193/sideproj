@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		442377221CECF9F800F81BEE /* movieModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 442377211CECF9F800F81BEE /* movieModel.m */; };
 		4426D44B1CDA82DC005178DF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4426D44A1CDA82DC005178DF /* main.m */; };
 		4426D44E1CDA82DC005178DF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4426D44D1CDA82DC005178DF /* AppDelegate.m */; };
 		4426D4511CDA82DC005178DF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4426D4501CDA82DC005178DF /* ViewController.m */; };
@@ -20,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		442377201CECF9F800F81BEE /* movieModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = movieModel.h; sourceTree = "<group>"; };
+		442377211CECF9F800F81BEE /* movieModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = movieModel.m; sourceTree = "<group>"; };
 		4426D4461CDA82DC005178DF /* sideProj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sideProj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4426D44A1CDA82DC005178DF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4426D44C1CDA82DC005178DF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -77,6 +80,8 @@
 				4426D4501CDA82DC005178DF /* ViewController.m */,
 				44E5CD4C1CDBC3C400DE6500 /* CollectionViewController.h */,
 				44E5CD4D1CDBC3C400DE6500 /* CollectionViewController.m */,
+				442377201CECF9F800F81BEE /* movieModel.h */,
+				442377211CECF9F800F81BEE /* movieModel.m */,
 				44E5CD551CE5704C00DE6500 /* API.h */,
 				44E5CD561CE5704C00DE6500 /* API.m */,
 				44E5CD521CE2DE7B00DE6500 /* CollectionViewCell.h */,
@@ -169,6 +174,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				442377221CECF9F800F81BEE /* movieModel.m in Sources */,
 				44E5CD541CE2DE7B00DE6500 /* CollectionViewCell.m in Sources */,
 				44E5CD4E1CDBC3C400DE6500 /* CollectionViewController.m in Sources */,
 				4426D4511CDA82DC005178DF /* ViewController.m in Sources */,

@@ -8,6 +8,7 @@
 
 #import "CollectionViewController.h"
 #import "CollectionViewCell.h"
+#import "API.h"
 
 
 @interface CollectionViewController ()
@@ -36,8 +37,6 @@ static NSString * const reuseIdentifier = @"Cell";
 //    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     // Do any additional setup after loading the view.
-    
- [API searchRequestForMovies:<#(NSString *)#> withCompletion:<#^(NSMutableArray *movies)completionBlock#>]
     
     
 }
@@ -74,7 +73,9 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    CollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    
+//    cell.posterBoard.image = 
     
     // Configure the cell
     
