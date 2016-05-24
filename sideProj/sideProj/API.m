@@ -8,6 +8,7 @@
 
 #import "API.h"
 #import "CollectionViewController.h"
+#import "movieModel.h"
 
 
 NSString * const OMDB_URL = @"https://www.omdbapi.com/?";
@@ -46,7 +47,31 @@ NSString * const OMDB_URL = @"https://www.omdbapi.com/?";
         
         NSMutableArray *moviesresults = searchResponse [@"Search"];
         
+        NSMutableArray *mMovies = [NSMutableArray new];
+        
+        
+                for (NSDictionary *movie in moviesresults) {
+                    
+                    movieModel *currentMovies = [[movieModel new] initWithSearchDictionary: movieModel];
+                    
+                    mMovies = (NSMutableArray *) [mMovies arrayByAddingObjectsFromArray:currentMovies];
+                    
+                    
+                    
+
+                    }
+        
+                for (movieModel *movie in mMovies) {
+                        NSLog(@"Created Movie: %@", movie.title);
+            
+                    }
+        
+        
+        
         completionBlock (moviesresults);
+        
+        
+        
         
 
     }];

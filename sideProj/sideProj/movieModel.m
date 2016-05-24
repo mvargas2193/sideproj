@@ -11,37 +11,26 @@
 @implementation movieModel
 
 
--(instancetype) initWithSearchDictionary: (NSDictionary *) movieDictionary {
+-(instancetype)initWithTile:(NSString *)title imdbID:(NSString *)imdbID year:(NSString *)year posterURL:(NSURL *)posterURL movieInfo:(NSString *)movieInfo {
     
     self = [super init];
     
     if (self) {
         
-        _title = movieDictionary[@"Title"];
-        _year = movieDictionary[@"Year"];
-        _imdbID = movieDictionary[@"imdbID"];
-        _posterURL = movieDictionary[@"PosterUrl"];
+        _title = title;
+        _imdbID = imdbID;
+        _year = year;
+        _posterURL = posterURL;
+        _movieInfo = movieInfo;
         
     }
     
     return  self;
     
+    
+ 
 }
 
--(instancetype)initWithImdbDictionary: (NSDictionary *) imdbDictionary {
-    
-    self = [super init];
-    
-    
-    if (self) {
-        NSLog(@"imdb");
-        
-    }
-    
-    return self;
-    
-}
 
--
 
 @end
